@@ -1,2 +1,1 @@
-# Java-is-awesome-sucka
-&lt;insert description here, coder was too busy making the code running smoothly>
+Shizz invoving Shee yen and Dibzz practicals in Eeyesh Aii yesh Ghee Eyess Tee.
