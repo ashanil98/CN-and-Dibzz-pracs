@@ -1,0 +1,40 @@
+##PRINCICOMP
+names(decathlon2)
+attach(decathlon2)
+x<-cbind(X100m,Long.jump,Shot.put,High.jump,X400m,X110m.hurdle,Discus,Pole.vault,Javeline,X1500m,Rank,Points)
+summary(x)
+ncol(x)
+cor(x)
+#principal component analysis
+pca1<-princomp(x, scores = TRUE, cor= TRUE)
+summary(pca1) # first 4 components are important 
+
+#loading principal components
+loadings(pca1) ##Loading of each original principal component over principal component 
+
+##PLOT
+plot(pca1) ##first 4 components are above 1
+biplot(pca1) ##Compare with loading output
+
+##CHECK SCORE OF OBSERVATIONS ON PCs
+pca1$scores[1:10,] ##observations 7-10 have high score on PC1 and so on..
+
+##HOW MANY FEATURES TO RETAIN in our case summary says 4 variables/factors 
+fa1<- factanal(x, factors = 4, rotation = "none")
+fa1 ##OBSERVE uniqueness in output --high.jump and pole.vaults are highly unique
+##with rotation = varimax
+#PCA is used to describe as much of the variation in the first few axes. 
+#Here, we first center the variables to have a mean of zero and then rotate the axes to 
+#reduce the dimensions or cover the maximum variation.
+#Rotation is done so that the first axis contains as much variation as possible, 
+#the second axis contains as much of the remaining variation and so on. 
+#Change of coordinates used in PCA is known as Varimax rotation. 
+#It maximizes the sum of the variances of the squared loadings as all the 
+###coefficients will be either large or near zero####, with few intermediate values.
+
+#The goal is to associate each variable to at most one factor. 
+#The interpretation of the results of the PCA will be simplified.
+
+
+fa1<- factanal(x, factors = 4, rotation = "varimax") ##compare result with none rotation 
+fa1
