@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            EXPERIMENT 2: tables with img and text
+        </title>
+        <style>
+            table,th,td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th,td {
+                padding:36px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width:100%;">
+            <tr>
+                <th>Roll number</th>
+                <th>Name</th>
+                <th colspan="2">Telephone Number</th>
+                <th>Nationality</th>
+            </tr>
+            <tr>
+                <td>116A1001</td>
+                <td>Chetan</td>
+                <td>1234567890</td>
+                <td>0987654321</td>
+                <td rowspan="2"><img height ="100px" width="150px" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"></td>
+            </tr>
+            <tr>
+                <td>116A1002</td>
+                <td>Anand</td>
+                <td>1122334455</td>
+                <td>1112223331</td>
+            </tr>
+            <tr>
+                <td>116A1003</td>
+                <td>Arvindraj</td>
+                <td>6677889900</td>
+                <td>1111222233</td>
+                <td><img height="100px" width="150px" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png"></td>
+            </tr>    
+        </table>
+    </body>
+</html>

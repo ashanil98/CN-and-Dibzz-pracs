@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            EXP5: fibonacci using JS
+        </title>
+        <script>
+            function fibonacci() {
+                var number = document.getElementById('input').value;
+                var num1 = 0;
+                var num2 = 1;
+                var string;
+                if (number <=0 ) {
+                    document.getElementById('output').innerHTML = "Invalid Input";    
+                }
+                else if (number==1) {
+                    document.getElementById('output').innerHTML = num1;    
+                }
+                else if(number==2) {
+                    document.getElementById('output').innerHTML = num1+" "+num2;
+                }
+                else {
+                    string = num1+" "+num2;
+                    var num3 = 0;
+                    while(number>2) {
+                        num3 = num1 + num2;
+                        string = string +" "+num3;
+                        num1 = num2;
+                        num2 = num3;
+                        number = number - 1;
+                    }
+                    document.getElementById('output').innerHTML =string;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Enter number of terms: <input id="input">
+        <button onclick="fibonacci()">Calculate</button>
+        <div id="output"></div>
+    </body>
+</html>

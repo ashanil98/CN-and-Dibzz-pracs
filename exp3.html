@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            EXPERIMENT 3: event JS
+        </title>
+    </head>
+    <body>
+        <button onclick = "displayDate()">Click to see Date</button>
+        <h4>Above button is to demonstrate onclick</h4>
+        <div id = "DateDiv"></div>
+        <br><br>
+        <button onmouseover = "mouseOver()" onmouseout="mouseOut()">Hover over button</button>
+        <h4>Above button is to demonstrate onmouseover and onmouseout</h4>
+        <div id = "d1"></div>
+        <script type="text/javascript">
+            function displayDate() {
+                document.getElementById('DateDiv').innerHTML = Date();
+            }
+            function mouseOver() {
+                document.getElementById('d1').innerHTML = 'MOUSE OVER';
+            }
+            function mouseOut() {
+                document.getElementById('d1').innerHTML = 'MOUSE OUT';
+            }
+        </script>
+    </body>
+</html>
