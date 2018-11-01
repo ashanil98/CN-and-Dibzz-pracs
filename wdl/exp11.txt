@@ -1,0 +1,1 @@
+We changed the contents of this division using AJAX.

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            EXP5: factorial using JS
+        </title>
+        <script>
+            function factorial() {
+                var number = document.getElementById('input').value;
+                var fact = 1;
+                while(number > 1) {
+                    fact = fact * number;
+                    number = number - 1;
+                }
+                //alert(fact);
+                document.getElementById('output').innerHTML = "Factorial is "+fact;
+            }
+        </script>
+    </head>
+    <body>
+        Enter number: <input id="input">
+        <button onclick="factorial()">Calculate</button>
+        <div id="output"></div>
+    </body>
+</html>

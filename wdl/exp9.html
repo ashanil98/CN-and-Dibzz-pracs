@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            EXP 9: jsOBJ to JSON and then back to jsOBJ
+        </title>
+    </head>
+    <body>
+        <form name="myForm" onsubmit="myFunc()" method="post">
+            Name: <input type="text" name="name"><br>
+            Age: <input type="text" name="age"><br>
+            City: <input type="text" name="city"><br>
+            <input type="submit" value="submit">
+        </form>
+        <h2>Create JSON string from a JavaScript object.</h2>
+        <p id="demo"></p>
+        <br><br><br>
+        <h2>Below is the data we will get from parsing the above JSON object</h2>
+        <p id="demo2"></p>
+        <script>
+            function myFunc() {
+                var name = document.forms["myForm"]["name"].value;
+                var age = document.forms["myForm"]["age"].value;
+                var city = document.forms["myForm"]["city"].value;
+                var obj = { name: name, age: age, city: city };
+                var myJSON = JSON.stringify(obj);
+                document.getElementById("demo").innerHTML = myJSON;
+                var newobj = JSON.parse(myJSON);
+                document.getElementById("demo2").innerHTML = "NAME: "+newobj.name+" AGE: "+newobj.age+" CITY: "+newobj.city;
+                alert('SUCCESS');
+            }
+        </script>
+    </body>
+</html>

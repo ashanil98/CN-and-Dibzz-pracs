@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookstore [
+    <!ELEMENT bookstore (book+)>
+    <!ELEMENT book (title,author,ISBN,publisher,edition,price)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT ISBN (#PCDATA)>
+    <!ELEMENT publisher (#PCDATA)>
+    <!ELEMENT edition (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+]>
+<bookstore>
+    <book>
+        <title>title1</title>
+        <author>author1</author>
+        <ISBN>ISBN1</ISBN>
+        <publisher>publisher1</publisher>
+        <edition>edition1</edition>
+        <price>price1</price>
+    </book>
+        <title>title2</title>
+        <author>author2</author>
+        <ISBN>ISBN2</ISBN>
+        <publisher>publisher2</publisher>
+        <edition>edition2</edition>
+        <price>price2</price>
+    <book>
+    </book>
+</bookstore>
+
